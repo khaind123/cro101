@@ -8,7 +8,7 @@ import MyLab6 from './src/screens/lab6';
 import MyLab7 from './src/screens/lab7';
 
 const App = () => {
-  return <MyLab3 />;
+  return <MyLab5 />;
 };
 
 export default App;
