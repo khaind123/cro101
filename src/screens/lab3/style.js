@@ -73,4 +73,51 @@ export const styles = StyleSheet.create({
         color: 'orange',
     },
 
+    tipStyle: {
+        borderWidth: 1,
+        borderColor: 'gray',
+        borderRadius: 10,
+        marginHorizontal: 15,
+        marginTop: 10,
+    },
+
+    centeredView: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+        marginTop: 22,
+    },
+
+    modalView: {
+        margin: 20,
+        backgroundColor: 'white',
+        borderRadius: 20,
+        padding: 30,
+        alignItems: 'center',
+    },
+
+    button: {
+        borderRadius: 20,
+        padding: 10,
+    },
+
+    buttonOpen: {
+        backgroundColor: '#2196F3',
+    },
+
+    buttonClose: {
+        backgroundColor: '#2196F3',
+    },
+
+    textStyle: {
+        color: 'white',
+        fontWeight: 'bold',
+        textAlign: 'center',
+    },
+
+    modalText: {
+        marginBottom: 15,
+        textAlign: 'center',
+    }
+
 });
