@@ -2,7 +2,7 @@ import React from 'react';
 import {Alert, Modal, Pressable, Text, View} from 'react-native';
 import { styles } from './style';
 
-const MyBai3 = () => {
+const MyB3L3 = () => {
   return (
     <View style = {styles.centeredView}>
         <Modal
@@ -33,4 +33,4 @@ const MyBai3 = () => {
   );
 };
 
-export default MyBai3;
+export default MyB3L3;
