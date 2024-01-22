@@ -9,16 +9,11 @@ export const styles = StyleSheet.create({
         marginTop: 30,
     },
 
-    container2: {
-        width: '100%',
-        height: '100%',
-    },
-
     item: {
-        backgroundColor: 'orange',
         padding: 20,
         marginVertical: 8,
         marginHorizontal: 16,
+        backgroundColor: 'lightgray',
     },
 
     avatar: {
@@ -29,16 +24,21 @@ export const styles = StyleSheet.create({
 
     title: {
         textAlign: 'center',
-        marginLeft: 60,
     },
 
     gmail: {
         textAlign: 'center',
-        marginLeft: 60,
+    },
+
+    text1: {
+        color: 'green',
+        fontSize: 20,
+        textAlign: 'right',
+        padding: 10,
     },
 
     text: {
-
+        
     },
 
     img: {

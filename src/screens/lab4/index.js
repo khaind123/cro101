@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {FlatList, Image, SafeAreaView, Text, Touchable, TouchableOpacity, View} from 'react-native';
+import {FlatList, Image, RefreshControl, SafeAreaView, ScrollView, StatusBar, Text, View} from 'react-native';
 import { styles } from './style';
 
 const DATA = [
@@ -8,6 +8,7 @@ const DATA = [
       title: 'Charlie',
       gmail: 'charlie@gmail.com',
       image: require('../../assests/anh1.jpg'),
+      text: 'Call',
   },
 
   {
@@ -15,6 +16,7 @@ const DATA = [
       title: 'Tom',
       gmail: 'tom@gmail.com',
       image: require('../../assests/anh3.jpg'),
+      text: 'Call',
   },
 
   {
@@ -22,6 +24,7 @@ const DATA = [
       title: 'Michael',
       gmail: 'michael@gmail.com',
       image: require('../../assests/anh2.jpg'),
+      text: 'Call',
   },
 
   {
@@ -29,6 +32,7 @@ const DATA = [
       title: 'Thomas',
       gmail: 'thomas@gmail.com',
       image: require('../../assests/anh3.jpg'),
+      text: 'Call',
   },
 
   {
@@ -36,6 +40,7 @@ const DATA = [
       title: 'Jerry',
       gmail: 'jerry@gmail.com',
       image: require('../../assests/anh1.jpg'),
+      text: 'Call',
   },
 
   {
@@ -43,25 +48,35 @@ const DATA = [
       title: 'Mile',
       gmail: 'mile@gmail.com',
       image: require('../../assests/anh1.jpg'),
+      text: 'Call',
   },
 ];
 
-const Item = ({title, gmail, image}) => (
+const Item = ({title, gmail, image, text}) => (
   <View style = {styles.item}>
     <Text style = {styles.title}>{title}</Text>
     <Text style = {styles.gmail}>{gmail}</Text>
     <Image source = {image} style = {styles.avatar}></Image>
+    <Text style = {styles.text1}>{text}</Text>
   </View>
 );
 
 const MyLab4 = () => {
   return (
     <SafeAreaView style = {styles.container}>
+      <StatusBar
+      barStyle = "dark-content"
+      hidden = {false}
+      backgroundColor = "lightblue"
+      translucent = {false}/>
+    
       <FlatList
         data = {DATA}
-        renderItem = {({item}) => <Item title = {item.title} 
+        renderItem = {({item}) => <Item title = {item.title}
                                         gmail = {item.gmail} 
-                                        image = {item.image}/>}
+                                        image = {item.image}
+                                        text = {item.text} />
+                                  }
         keyExtractor = {item => item.id}
       />
     </SafeAreaView>
