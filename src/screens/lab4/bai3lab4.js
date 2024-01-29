@@ -21,7 +21,7 @@ const MyB3L4 = () => {
             <Input label = "Password" placeholder = "******"/>
             {/* <Input isPassword label = "Password" placeholder = "******"/> */}
             
-            <Button style = {styles.button} title = "Sign In"></Button>
+            <Button title = "Sign In"></Button>
             <Seperator text = "Or sign up with"></Seperator>
             <Googlelogin></Googlelogin>
 

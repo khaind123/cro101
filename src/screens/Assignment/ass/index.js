@@ -3,7 +3,7 @@ import {Image, Pressable, Text, View} from 'react-native';
 import {styles} from './style'
 import Button from '../../../compoments/button';
 
-const MyAss = () => {
+const MyAss = ({navigation}) => {
   return (
     <View>
       <Image
@@ -15,8 +15,10 @@ const MyAss = () => {
       <Text style = {[styles.titleText, styles.centerTitle]}>YOU NEED</Text>
       <Text style = {styles.titleText}>HERE!</Text>
 
-      <Button title = "Sign Up"></Button>
-      <Pressable>
+      <Button 
+        onPress = {() => navigation.navigate('SignUp')}
+        title = "Sign Up"></Button>
+      <Pressable onPress = {() => navigation.navigate('SignUp')}>
         <Text style = {styles.footerText}>Sign In</Text>
       </Pressable>
     </View>

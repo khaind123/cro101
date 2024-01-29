@@ -37,10 +37,6 @@ export const styles = StyleSheet.create({
         padding: 10,
     },
 
-    text: {
-        
-    },
-
     img: {
         width: '100%',
         height: 200,
