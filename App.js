@@ -17,7 +17,7 @@ import MyB3L5 from './src/screens/lab5/bai3lab5';
 
 // const Stack = createNativeStackNavigator();
 const App = () => {
-  return ( <MyLab6 />
+  return ( <MyB3L5 />
     // <NavigationContainer>
     //   <Stack.Navigator>
     //     <Stack.Screen name = "Home" component = {MyAss}/>
