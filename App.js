@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
-import {Text} from 'react-native';
 import MyAss from './src/screens/Assignment/ass';
 import MyLab3 from './src/screens/lab3';
 import MyB3L3 from './src/screens/lab3/bai3lab3';
@@ -17,7 +16,7 @@ import MyB3L5 from './src/screens/lab5/bai3lab5';
 
 // const Stack = createNativeStackNavigator();
 const App = () => {
-  return ( <MyB3L5 />
+  return ( <MyLab7/>
     // <NavigationContainer>
     //   <Stack.Navigator>
     //     <Stack.Screen name = "Home" component = {MyAss}/>
