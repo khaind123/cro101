@@ -1,8 +1,8 @@
 import * as React from 'react';
-import { Button, View } from 'react-native';
+import { Button, ImageBackground, View } from 'react-native';
 import { NavigationContainer } from "@react-navigation/native";
 import { createDrawerNavigator } from "@react-navigation/drawer";
-import Icon from 'react-native-vector-icons/FontAwesome';
+import CustomDrawer from './CustomDrawer';
 
 function HomeScreen({navigation}) {
   return (
@@ -53,18 +53,8 @@ const Drawer = createDrawerNavigator();
 const MyLab6 = () => {
   return (
     <NavigationContainer>
-      <Drawer.Navigator initialRouteName = 'Home'>
-        <Drawer.Screen name = "Home" component = {HomeScreen}
-                      //  options = {{
-                      //   drawerIcon: ({focused, size}) => (
-                      //     <Icon
-                      //       name = "home"
-                      //       size = {size}
-                      //       color = {focused}
-                      //     />
-                      //   ),
-                      //  }}
-                       />
+      <Drawer.Navigator drawerContent = {props => <CustomDrawer {...props} />} initialRouteName = 'Home'>
+        <Drawer.Screen name = "Home" component = {HomeScreen}/>
         <Drawer.Screen name = "Article" component = {ArticleScreen}/>
         <Drawer.Screen name = "Setting" component = {SettingScreen}/>
         <Drawer.Screen name = "Help" component = {HelpScreen}/>

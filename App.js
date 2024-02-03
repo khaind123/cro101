@@ -7,16 +7,17 @@ import MyB3L3 from './src/screens/lab3/bai3lab3';
 import MyLab4 from './src/screens/lab4';
 import MyLab5 from './src/screens/lab5';
 import MyLab6 from './src/screens/lab6';
-import MyLab7 from './src/screens/lab7';
 import SignUp from './src/screens/Assignment/Signup';
 import SignIn from './src/screens/Assignment/Signin';
 import MyB3L4 from './src/screens/lab4/bai3lab4';
 import MyB2L5 from './src/screens/lab5/bai2lab5';
 import MyB3L5 from './src/screens/lab5/bai3lab5';
+import TopTap from './src/screens/lab7/topmenu';
+import BottomTap from './src/screens/lab7/bottommenu';
 
 // const Stack = createNativeStackNavigator();
 const App = () => {
-  return ( <MyLab7/>
+  return ( <MyLab6/>
     // <NavigationContainer>
     //   <Stack.Navigator>
     //     <Stack.Screen name = "Home" component = {MyAss}/>
