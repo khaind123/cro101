@@ -6,14 +6,18 @@ import Input from "../../../compoments/input";
 import Seperator from "../../../compoments/seperator";
 import Googlelogin from "../../../compoments/googlelogin";
 
-const SignIn = () => {
+const SignIn = ({navigation}) => {
     const onSignIn = () => {
-        console.log("Sign in");
+        navigation.navigate("SignUp");
     };
+
+    const onBack = () => {
+        navigation.goBack();
+    }; 
 
     return (
         <View style = {styles.container}>
-            <AuthHeader title = "Sign In"/>
+            <AuthHeader onBackPress = {onBack} title = "Sign In"/>
             <Input label = "Email" placeholder = "khai@gmail.com"/>
             <Input label = "Password" placeholder = "******"/>
             {/* <Input isPassword label = "Password" placeholder = "******"/> */}

@@ -18,7 +18,7 @@ const MyAss = ({navigation}) => {
       <Button 
         onPress = {() => navigation.navigate('SignUp')}
         title = "Sign Up"></Button>
-      <Pressable onPress = {() => navigation.navigate('SignUp')}>
+      <Pressable onPress = {() => navigation.navigate('SignIn')}>
         <Text style = {styles.footerText}>Sign In</Text>
       </Pressable>
     </View>

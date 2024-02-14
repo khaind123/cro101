@@ -7,15 +7,19 @@ import Checkbox from "../../../compoments/Checkbox";
 import Seperator from "../../../compoments/seperator";
 import Googlelogin from "../../../compoments/googlelogin";
 
-const SignUp = () => {
+const SignUp = ({navigation}) => {
     const [checked, setChecked] = useState(false);
     const onSignIn = () => {
         console.log("Sign in");
     };
 
+    const onBack = () => {
+        navigation.goBack();
+    };
+
     return (
         <View style = {styles.container}>
-            <AuthHeader title = "Sign Up"/>
+            <AuthHeader onBackPress = {onBack} title = "Sign Up"/>
             <Input label = "Name" placeholder = "Duy Khai"/>
             <Input label = "Email" placeholder = "khai@gmail.com"/>
             <Input label = "Password" placeholder = "******"/>
