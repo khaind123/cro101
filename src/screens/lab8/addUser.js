@@ -2,23 +2,24 @@ import { useState } from "react";
 import { Text, TextInput, TouchableOpacity, View } from "react-native";
 import { styles } from "./style";
 
-const AddUser = () => {
-const [name, setName] = useState('');
-const [birthday, setBirthday] = useState('');
+const AddUser = ({navigation}) => {
+    const [name, setName] = useState('');
+    const [birthday, setBirthday] = useState('');
 
-const saveData = async() => {
-    console.warn('call add');
-    const url = 'http://10.0.2.2:3000/users';
-    let result = await fetch(url, {
-        method: 'POST',
-        headers: {'Content-Type':'aplication/json'},
-        body: JSON.stringify({name, birthday}),
-    });
-    result = await result.json();
-    if (result) {
-        console.warn("Add success");
+    const saveData = async() => {
+        const url = 'http://10.0.2.2:3000/users';
+        let result = await fetch(url, {
+            method: 'POST',
+            headers: {'Content-Type':'aplication/json'},
+            body: JSON.stringify({name, birthday}),
+        });
+
+        result = await result.json();
+        if (result) {
+            console.warn("Add success");
+        }
     }
-}
+
     return(
         <View style = {styles.modelContent}>
             <TextInput style = {styles.input}
@@ -32,7 +33,9 @@ const saveData = async() => {
                        onChangeText = {Text => setBirthday(Text)}/>
 
             <View style = {styles.buttonGroup}>
-                <TouchableOpacity style = {styles.button} onPress = {saveData}>
+                <TouchableOpacity style = {styles.button} 
+                                  onPress = {saveData} 
+                                  onPressOut={() => navigation.navigate("ListUser")}>
                     <Text style = {styles.buttonText}>Add New</Text>
                 </TouchableOpacity>
             </View> 

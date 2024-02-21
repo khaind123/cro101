@@ -29,7 +29,7 @@ const SignIn = ({navigation}) => {
             <Text style = {styles.footerText}>
                 Don't have an account?
                 <Text 
-                    onPress = {onSignIn}
+                    onPress = {onSignUp}
                     style = {styles.footerLink}>
                     Sign Up
                 </Text>

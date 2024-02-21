@@ -56,24 +56,24 @@ const Tabs = () => (
 );
 
 const App = () => {
-  // const isSignedIn = true;
+  const isSignedIn = true;
   return ( 
-    <CRUD/>
-    // <NavigationContainer>
-    //   <Stack.Navigator>
-    //     {isSignedIn ? (
-    //       <>
-    //         <Stack.Screen name = 'Tabs' component = {Tabs} options = {{headerShown: false}}/> 
-    //       </>
-    //     ) : (
-    //       <>
-    //       <Stack.Screen name = "Home" component = {MyAss}/>
-    //       <Stack.Screen name = "SignUp" component = {SignUp} options = {{headerShown: false}}/>
-    //       <Stack.Screen name = "SignIn" component = {SignIn} options = {{headerShown: false}}/>
-    //       </>
-    //     )}
-    //     </Stack.Navigator>
-    // </NavigationContainer>
+    // <CRUD/>
+    <NavigationContainer>
+      <Stack.Navigator>
+        {isSignedIn ? (
+          <>
+            <Stack.Screen name = 'Tabs' component = {Tabs} options = {{headerShown: false}}/> 
+          </>
+        ) : (
+          <>
+          <Stack.Screen name = "Home" component = {MyAss}/>
+          <Stack.Screen name = "SignUp" component = {SignUp} options = {{headerShown: false}}/>
+          <Stack.Screen name = "SignIn" component = {SignIn} options = {{headerShown: false}}/>
+          </>
+        )}
+        </Stack.Navigator>
+    </NavigationContainer>
   );
 };
 

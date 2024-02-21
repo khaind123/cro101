@@ -87,5 +87,10 @@ export const styles = StyleSheet.create({
         justifyContent: 'center',
     },
 
-    
+    image: {
+        height: 80, 
+        width: 80, 
+        borderRadius: 40, 
+        marginBottom: 10
+    },
 });

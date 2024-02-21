@@ -7,7 +7,7 @@ const ListUser = ({navigation}) => {
     const [openDialog, setOpenDialog] = useState(false);
     const [selectedUser, setSelectedUser] = useState(undefined);
 
-    const getAPI = async() => {
+    const getAPI = async () => {
         const url = 'http://10.0.2.2:3000/users';
         let result = await fetch(url);
         result = await result.json();
@@ -18,8 +18,8 @@ const ListUser = ({navigation}) => {
 
     const handleDelete = async id => {
         const url = 'http://10.0.2.2:3000/users';
-        let result = await fetch('${url}/${id}', {method: 'Delete',});
-        result = await result.json();
+        let result = await fetch(`${url}/${id}`, {method: 'Delete'});
+        result = await result.json(); 
         if (result) {
             getAPI();
         }
@@ -41,7 +41,7 @@ const ListUser = ({navigation}) => {
     return(
         <ScrollView>
             <TouchableOpacity style = {styles.buttonNew}
-            onPress = {() => navigation.navigate('AddUser')}>
+                              onPress = {() => navigation.navigate('AddUser')}>
                 <Text style = {styles.buttonNew}>Add New</Text>
             </TouchableOpacity>
 
@@ -53,10 +53,12 @@ const ListUser = ({navigation}) => {
                         </View>
                         <View style = {styles.containerButton}>
                             <TouchableOpacity style = {styles.button}>
-                                <Text style = {styles.buttonText} onPress = {() => handleUpdate(item)}>update</Text>
+                                <Text style = {styles.buttonText} 
+                                      onPress = {() => handleUpdate(item)}>Update</Text>
                             </TouchableOpacity>
                             <TouchableOpacity style = {styles.button}>
-                                <Text style = {styles.buttonText} onPress = {() => handleDelete(item.id)}>delete</Text>
+                                <Text style = {styles.buttonText} 
+                                      onPress = {() => handleDelete(item.id)}>Delete</Text>
                             </TouchableOpacity>
                         </View>
                     </View>
@@ -85,7 +87,7 @@ const UpdateModel = props => {
     const updateUser = async() => {
         const url = 'http://10.0.2.2:3000/users';
         const id = props.selectedUser.id;
-        let result = await fetch('${url}/${id}', {
+        let result = await fetch(`${url}/${id}`, {
             method: 'Put',
             headers: {
                 'Content-Type': 'application/json',
@@ -95,7 +97,7 @@ const UpdateModel = props => {
 
         result = await result.json();
         if (result) {
-            props.getAPIData();
+            props.getAPI();
             props.setOpenDialog(false);
         }
     };
@@ -105,13 +107,13 @@ const UpdateModel = props => {
             <TextInput style = {styles.input}
                        placeholder = "Add Name"
                        value = {name}
-                       onChangeText = {Text => setName(Text)}>
+                       onChangeText = {text => setName(text)}>
             </TextInput>
 
             <TextInput style = {styles.input}
                        placeholder = "Add Birthday"
                        value = {birthday}
-                       onChangeText = {Text => setBirthday(Text)}>
+                       onChangeText = {text => setBirthday(text)}>
             </TextInput>
 
             <View style = {styles.buttonGroup}>
