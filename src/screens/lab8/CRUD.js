@@ -7,10 +7,10 @@ const CRUD = () => {
     const Stack = createNativeStackNavigator();
 
     return(
-        <NavigationContainer>
+        <NavigationContainer independent = "true">
             <Stack.Navigator>
-                <Stack.Screen name = "ListUser" component = {ListUser}/>
-                <Stack.Screen name = "AddUser" component = {AddUser}/>
+                <Stack.Screen name = "ListUser" component = {ListUser} options = {{headerShown: false}}/>
+                <Stack.Screen name = "AddUser" component = {AddUser} options = {{headerShown: false}}/>
             </Stack.Navigator>
         </NavigationContainer>
     );

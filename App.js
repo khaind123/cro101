@@ -22,59 +22,19 @@ import BottomTap from './src/screens/lab7/bottommenu';
 import CRUD from './src/screens/lab8/CRUD';
 
 const Stack = createNativeStackNavigator();
-const Tab = createBottomTabNavigator();
-
-const Tabs = () => (
-  <Tab.Navigator
-    screenOptions = {({route}) => ({
-      tabBarIcon: ({focused}) => {
-        let icon;
-        if (route.name === 'Home') {
-          icon = focused
-            ? require('./src/assests/home_active.png')
-            : require('./src/assests/home.png')
-        } else if (route.name === 'Favorites') {
-          icon = focused
-            ? require('./src/assests/bookmark_active.png')
-            : require('./src/assests/bookmark.png')
-        } else if (route.name === 'Profile') {
-          icon = focused
-            ? require('./src/assests/person_active.png')
-            : require('./src/assests/person.png')
-        }
-
-        return <Image style = {{width: 22, height: 24}} source = {icon}/>
-      },
-      headerShown: false,
-      tabBarShowLabel: false,
-      tabBarStyle: {borderTopColor: '#DADADA'}
-    })}>
-    <Tab.Screen name = 'Home' component = {Home}/>
-    <Tab.Screen name = 'Favorites' component = {Favorites}/>
-    <Tab.Screen name = 'Profile' component = {Profile}/>
-  </Tab.Navigator>  
-);
 
 const App = () => {
-  const isSignedIn = true;
   return ( 
     // <CRUD/>
-    <NavigationContainer>
+    <NavigationContainer independent = "true">
       <Stack.Navigator>
-        {isSignedIn ? (
-          <>
-            <Stack.Screen name = 'Tabs' component = {Tabs} options = {{headerShown: false}}/> 
-          </>
-        ) : (
-          <>
-          <Stack.Screen name = "Home" component = {MyAss}/>
+          <Stack.Screen name = "Home" component = {MyAss} options = {{headerShown: false}}/>
           <Stack.Screen name = "SignUp" component = {SignUp} options = {{headerShown: false}}/>
           <Stack.Screen name = "SignIn" component = {SignIn} options = {{headerShown: false}}/>
-          </>
-        )}
+          <Stack.Screen name = "CRUD" component = {CRUD}/>
         </Stack.Navigator>
     </NavigationContainer>
-  );
+   );
 };
 
 export default App;
@@ -82,3 +42,4 @@ export default App;
 //git add .
 //git commit -m "lab"
 //git push -u origin main
+//npx json-server db.json

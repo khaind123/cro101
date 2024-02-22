@@ -67,7 +67,8 @@ const ListUser = ({navigation}) => {
             <Modal visible = {openDialog} transparent = {true}>
                 <UpdateModel setOpenDialog = {setOpenDialog}
                              selectedUser = {selectedUser}
-                             getAPI = {getAPI}></UpdateModel>
+                             getAPI = {getAPI}>
+                </UpdateModel>
             </Modal>
         </ScrollView>
     );

@@ -7,8 +7,12 @@ import Seperator from "../../../compoments/seperator";
 import Googlelogin from "../../../compoments/googlelogin";
 
 const SignIn = ({navigation}) => {
-    const onSignIn = () => {
+    const onSignUp = () => {
         navigation.navigate("SignUp");
+    };
+
+    const onCRUD = () => {
+        navigation.navigate("CRUD");
     };
 
     const onBack = () => {
@@ -22,7 +26,9 @@ const SignIn = ({navigation}) => {
             <Input label = "Password" placeholder = "******"/>
             {/* <Input isPassword label = "Password" placeholder = "******"/> */}
             
-            <Button style = {styles.button} title = "Sign In"></Button>
+            <Button style = {styles.button} title = "Sign In" 
+                    onPress = {onCRUD}>
+            </Button>
             <Seperator text = "Or sign up with"></Seperator>
             <Googlelogin></Googlelogin>
 

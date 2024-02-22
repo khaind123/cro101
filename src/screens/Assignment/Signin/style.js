@@ -11,7 +11,6 @@ export const styles = StyleSheet.create({
 
     footerText: {
         color: 'blue',
-        marginBottom: 56,
         textAlign: 'center',
     },
 
