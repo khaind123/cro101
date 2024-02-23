@@ -25,14 +25,15 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return ( 
-    <NavigationContainer independent = "true">
-      <Stack.Navigator>
-          <Stack.Screen name = "Home" component = {MyAss} options = {{headerShown: false}}/>
-          <Stack.Screen name = "SignUp" component = {SignUp} options = {{headerShown: false}}/>
-          <Stack.Screen name = "SignIn" component = {SignIn} options = {{headerShown: false}}/>
-          <Stack.Screen name = "CRUD" component = {CRUD}/>
-        </Stack.Navigator>
-    </NavigationContainer>
+    <CRUD/>
+    // <NavigationContainer independent = "true">
+    //   <Stack.Navigator>
+    //       <Stack.Screen name = "Home" component = {MyAss} options = {{headerShown: false}}/>
+    //       <Stack.Screen name = "SignUp" component = {SignUp} options = {{headerShown: false}}/>
+    //       <Stack.Screen name = "SignIn" component = {SignIn} options = {{headerShown: false}}/>
+    //       <Stack.Screen name = "CRUD" component = {CRUD}/>
+    //     </Stack.Navigator>
+    // </NavigationContainer>
    );
 };
 
