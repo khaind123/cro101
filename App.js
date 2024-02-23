@@ -25,7 +25,6 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return ( 
-    // <CRUD/>
     <NavigationContainer independent = "true">
       <Stack.Navigator>
           <Stack.Screen name = "Home" component = {MyAss} options = {{headerShown: false}}/>
