@@ -22,8 +22,8 @@ const SignIn = ({navigation}) => {
     return (
         <View style = {styles.container}>
             <AuthHeader onBackPress = {onBack} title = "Sign In"/>
-            <Input label = "Email" placeholder = "khai@gmail.com"/>
-            <Input label = "Password" placeholder = "******"/>
+            <Input label = "Email"/>
+            <Input label = "Password"/>
             {/* <Input isPassword label = "Password" placeholder = "******"/> */}
             
             <Button style = {styles.button} title = "Sign In" 

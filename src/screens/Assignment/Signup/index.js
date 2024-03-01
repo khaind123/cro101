@@ -20,9 +20,9 @@ const SignUp = ({navigation}) => {
     return (
         <View style = {styles.container}>
             <AuthHeader onBackPress = {onBack} title = "Sign Up"/>
-            <Input label = "Name" placeholder = "Duy Khai"/>
-            <Input label = "Email" placeholder = "khai@gmail.com"/>
-            <Input label = "Password" placeholder = "******"/>
+            <Input label = "Name"/>
+            <Input label = "Email"/>
+            <Input label = "Password"/>
             {/* <Input isPassword label = "Password" placeholder = "******"/> */}
             <View style = {styles.checkRow}>
                 <Checkbox checked = {checked} onCheck = {setChecked}></Checkbox>
