@@ -9,7 +9,7 @@ const MyAss = ({navigation}) => {
       <Image
         resizeMode = "contain"
         style = {styles.img}
-        source = {require('../../../assests/splash_image.png')}/>
+        source = {require('../../../assests/splash_image.jpeg')}/>
     
       <Text style = {styles.titleText}>FIND ALL</Text>
       <Text style = {[styles.titleText, styles.centerTitle]}>YOU NEED</Text>
